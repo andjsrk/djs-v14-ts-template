@@ -8,6 +8,6 @@ export default new TextCommand({
 		child,
 	],
 	execute(msg) {
-		msg.reply('asdf')
+		msg.reply('This message has been sent because there\'s no sub command that executed')
 	}
 })
