@@ -17,8 +17,6 @@ export type Arg = Exclude<
 	| SubGroupArg
 >
 
-type ___ = CommandArg['autocomplete']
-
 type TransformedArgs = [ interaction: ChatInputCommandInteraction ]
 
 export interface BaseSlashCommandOptions extends CommandOptions<TransformedArgs> {
