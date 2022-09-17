@@ -28,7 +28,7 @@ export class TextCommand extends Command<Message, TransformedArgs> {
 			subCommand.setSubCommandDepths(depth + 1)
 		}
 	}
-	public override transform(msg: Message): [ Message, Array<string> ] {
+	protected override transform(msg: Message): [ Message, Array<string> ] {
 		const [ _, ...args ] = msg.content.split(' ').slice(this.depth)
 		return [ msg, args ]
 	}

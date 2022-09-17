@@ -37,7 +37,7 @@ export abstract class BaseSlashCommand extends Command<ChatInputCommandInteracti
 		this.args = options.args?.map(arg => ({ ...arg, required: true })) ?? []
 		this.optionalArgs = options.optionalArgs?.map(arg => ({ ...arg, required: false })) ?? []
 	}
-	public override transform(interaction: ChatInputCommandInteraction): [ ChatInputCommandInteraction ] {
+	protected override transform(interaction: ChatInputCommandInteraction): [ ChatInputCommandInteraction ] {
 		return [ interaction ]
 	}
 	protected toRaw() {

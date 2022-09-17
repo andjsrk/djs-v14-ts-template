@@ -9,7 +9,7 @@ export abstract class Command<T, Args extends Array<any> = [ T ]> {
 		this.name = options.name
 		this._execute = options.execute
 	}
-	public abstract transform(x: T): Args
+	protected abstract transform(x: T): Args
 	public abstract isMine(x: T): boolean
 	public execute(x: T) {
 		this._execute(...this.transform(x))
