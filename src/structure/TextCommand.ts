@@ -15,7 +15,6 @@ export class TextCommand extends Command<Message, TransformedArgs> {
 	constructor(options: CommandOptions<TransformedArgs>)
 	constructor(options: ParentTextCommandOptions | CommandOptions<TransformedArgs>) {
 		super({
-			// because of ts17009 need to create unnecessary anonymous function
 			execute: () => {},
 			...options,
 		})
