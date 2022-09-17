@@ -14,8 +14,8 @@ export class SubSlashCommand extends BaseSlashCommand {
 			type: CommandArgType.Subcommand as const,
 			...super.toRaw(),
 			options: [
-				...this.args.map(arg => ({ ...arg, required: true })),
-				...this.optionalArgs.map(arg => ({ ...arg, required: false })),
+				...this.args,
+				...this.optionalArgs,
 			],
 		}
 	}

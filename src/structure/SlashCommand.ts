@@ -39,8 +39,8 @@ export class SlashCommand extends BaseSlashCommand {
 			...super.toRaw(),
 			options:
 				this.subCommands?.map(subCommand => subCommand.toRaw()) ?? [
-					...this.args.map(arg => ({ ...arg, required: true })),
-					...this.optionalArgs.map(arg => ({ ...arg, required: false }))
+					...this.args,
+					...this.optionalArgs,
 				],
 		}
 	}
