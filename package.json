@@ -1,6 +1,6 @@
 {
 	"name": "djs-v14-ts-template",
-	"description": "",
+	"description": "A template for discord.js v14 + TypeScript",
 	"author": "andjsrk",
 	"license": "MIT",
 	"devDependencies": {
