@@ -16,7 +16,7 @@ export class TextCommand extends Command<Message, TransformedArgs> {
 	constructor(options: ParentTextCommandOptions | CommandOptions<TransformedArgs>) {
 		super({
 			// because of ts17009 need to create unnecessary anonymous function
-			execute: () => console.log('?'),
+			execute: () => {},
 			...options,
 		})
 		if ('subCommands' in options) this.subCommands = options.subCommands
