@@ -1,0 +1,12 @@
+{
+	"name": "djs-v14-ts-template",
+	"description": "",
+	"author": "andjsrk",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "latest"
+	},
+	"dependencies": {
+		"discord.js": "^14.3.0"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": true,
+		"lib": [ "ES2021" ],
+		"module": "CommonJS",
+		"moduleResolution": "Node",
+		"noEmitOnError": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"target": "ES2021"
+	},
+	"include": [ "src" ]
+}
