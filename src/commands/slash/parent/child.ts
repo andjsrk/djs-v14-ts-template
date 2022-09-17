@@ -11,6 +11,7 @@ export default new SubSlashCommand({
 		},
 	],
 	execute(interaction) {
-		interaction.reply('Im child command!')
+		const content = interaction.options.getString('content', true)
+		interaction.reply(`content: ${content}`)
 	}
 })
