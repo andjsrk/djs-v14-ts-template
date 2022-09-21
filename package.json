@@ -4,6 +4,7 @@
 	"author": "andjsrk",
 	"license": "MIT",
 	"devDependencies": {
+		"typescript": "latest",
 		"@types/node": "latest"
 	},
 	"dependencies": {
