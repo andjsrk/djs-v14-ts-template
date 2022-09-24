@@ -21,6 +21,9 @@ export class SlashCommand extends BaseSlashCommand {
 		})
 		if ('subCommands' in options) this.subCommands = options.subCommands
 	}
+	public override isMine(interaction: ChatInputCommandInteraction) {
+		return interaction.commandName === this.name
+	}
 	public override execute(interaction: ChatInputCommandInteraction) {
 		if (this.subCommands !== null) {
 			for (const subCommand of this.subCommands) {
@@ -29,9 +32,6 @@ export class SlashCommand extends BaseSlashCommand {
 		} else {
 			super.execute(interaction)
 		}
-	}
-	public override isMine(interaction: ChatInputCommandInteraction) {
-		return interaction.commandName === this.name
 	}
 	public override toRaw(): ChatInputCommand {
 		return {

@@ -32,6 +32,9 @@ export class TextCommand extends Command<Message, TransformedArgs> {
 		const [ _, ...args ] = msg.content.split(' ').slice(this.depth)
 		return [ msg, args ]
 	}
+	public override isMine(msg: Message) {
+		return msg.content.startsWith(PREFIX) && msg.content.slice(PREFIX.length).split(' ')[this.depth] === this.name
+	}
 	public override execute(msg: Message) {
 		if (this.subCommands !== null) {
 			let executedSomething = false
@@ -45,8 +48,5 @@ export class TextCommand extends Command<Message, TransformedArgs> {
 		} else {
 			super.execute(msg)
 		}
-	}
-	public override isMine(msg: Message) {
-		return msg.content.startsWith(PREFIX) && msg.content.slice(PREFIX.length).split(' ')[this.depth] === this.name
 	}
 }
