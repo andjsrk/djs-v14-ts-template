@@ -29,7 +29,7 @@ export class TextCommand extends Command<Message, TransformedArgs> {
 		}
 	}
 	protected override transform(msg: Message): [ Message, Array<string> ] {
-		const [ _, ...args ] = msg.content.split(' ').slice(this.depth)
+		const [ _commandName, ...args ] = msg.content.split(' ').slice(this.depth)
 		return [ msg, args ]
 	}
 	public override isMine(msg: Message) {
